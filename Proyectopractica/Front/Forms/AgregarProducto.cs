@@ -19,113 +19,113 @@ namespace Front
     {
 
 
-        public AgregarProducto()
+        public AgregarProducto ( )
         {
-            InitializeComponent();
+            InitializeComponent ();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click ( object sender, EventArgs e )
         {
-            InicioAdm inicio = new InicioAdm();
-            inicio.Show();
-            this.Hide();
-
-        }
-
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-            Opcion opcion = Principal.context.opciones.Find();
-
-            List<Ingredientes> ingredientes = opcion.GetIngredientes();
-
-            MessageBox.Show(ingredientes[0].ToString());
-
-
-
-
-            IngredienteOpcion IngredienteOpcion = Principal.context.ingredientesOpciones.Find(1);
-            MessageBox.Show(IngredienteOpcion.IdIngrediente.ToString());
-
-
-
-
-
-
-            Opcion opcionn = Principal.AgregarOpcion(txtNombre.Text, txtTipo.Text, txtDescripcion.Text, decimal.Parse(txtPrecio.Text), int.Parse(txtCantidad.Text));
-
-
-
-
-
-
-
-
-
-
-
-
-
-            data1.DataSource = Principal.context.opciones.Local.ToBindingList();
-
-
-
-            txtNombre.Clear();
-            txtTipo.Clear();
-            txtDescripcion.Clear();
-            txtPrecio.Clear();
-            txtCantidad.Clear();
-
-
+            InicioAdm inicio = new InicioAdm ();
+            inicio.Show ();
+            this.Hide ();
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+        private void button1_Click ( object sender, EventArgs e )
+        {
+
+
+            Opcion opcion = Principal.context.opciones.Find ();
+
+            List<Ingredientes> ingredientes = opcion.GetIngredientes ();
+
+            MessageBox.Show (ingredientes[0].ToString ());
+
+
+
+
+            IngredienteOpcion IngredienteOpcion = Principal.context.ingredientesOpciones.Find (1);
+            MessageBox.Show (IngredienteOpcion.IdIngrediente.ToString ());
+
+
+
+
+
+
+            Opcion opcionn = Principal.AgregarOpcion (txtNombre.Text, txtTipo.Text, txtDescripcion.Text, decimal.Parse (txtPrecio.Text), int.Parse (txtCantidad.Text));
+
+
+
+
+
+
+
+
+
+
+
+
+
+            data1.DataSource = Principal.context.opciones.Local.ToBindingList ();
+
+
+
+            txtNombre.Clear ();
+            txtTipo.Clear ();
+            txtDescripcion.Clear ();
+            txtPrecio.Clear ();
+            txtCantidad.Clear ();
+
+
+
+        }
+
+        private void button2_Click ( object sender, EventArgs e )
         {
 
         }
 
-        private void AgregarProducto_Load(object sender, EventArgs e)
+        private void AgregarProducto_Load ( object sender, EventArgs e )
         {
-            Principal.context.opciones.Load();
+            Principal.context.opciones.Load ();
             data1.DataSource = null;
-            data1.DataSource = Principal.context.opciones.Local.ToBindingList();
+            data1.DataSource = Principal.context.opciones.Local.ToBindingList ();
 
-            Principal.context.ingredientes.Load();
+            Principal.context.ingredientes.Load ();
             comboBoxIngredientes.DataSource = null;
-            comboBoxIngredientes.DataSource = Principal.context.ingredientes.Local.ToBindingList();
+            comboBoxIngredientes.DataSource = Principal.context.ingredientes.Local.ToBindingList ();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click ( object sender, EventArgs e )
         {
             if (data1.SelectedRows.Count == 0)
             {
 
-                MessageBox.Show("Debes seleccionar una fila para eliminar");
+                MessageBox.Show ("Debes seleccionar una fila para eliminar");
                 return;
             }
 
             DataGridViewRow filaSeleccionada = data1.SelectedRows[0];
 
-            int id = int.Parse(filaSeleccionada.Cells[0].Value.ToString());
-            Principal.context.opciones.Remove(Principal.context.opciones.Find(id));
-            Principal.context.SaveChanges();
+            int id = int.Parse (filaSeleccionada.Cells[0].Value.ToString ());
+            Principal.context.opciones.Remove (Principal.context.opciones.Find (id));
+            Principal.context.SaveChanges ();
 
-            data1.DataSource = Principal.context.opciones.Local.ToBindingList();
+            data1.DataSource = Principal.context.opciones.Local.ToBindingList ();
 
 
-            txtNombre.Clear();
-            txtTipo.Clear();
-            txtDescripcion.Clear();
-            txtPrecio.Clear();
-            txtCantidad.Clear();
+            txtNombre.Clear ();
+            txtTipo.Clear ();
+            txtDescripcion.Clear ();
+            txtPrecio.Clear ();
+            txtCantidad.Clear ();
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click ( object sender, EventArgs e )
         {
             DataGridViewRow filaSeleccionada = data1.SelectedRows[0];
 
@@ -136,7 +136,7 @@ namespace Front
 
 
 
-                Opcion? objetoSeleccionado = Principal.context.opciones.FirstOrDefault(a => a.IdOpcion == idOpcion);
+                Opcion? objetoSeleccionado = Principal.context.opciones.FirstOrDefault (a => a.IdOpcion == idOpcion);
 
                 IngredienteOpcion ingredienteOpc = new IngredienteOpcion
                 {
@@ -144,11 +144,11 @@ namespace Front
                     Opcion = objetoSeleccionado
 
                 };
-                Principal.context.ingredientesOpciones.Add(ingredienteOpc);
-                Principal.context.SaveChanges();
+                Principal.context.ingredientesOpciones.Add (ingredienteOpc);
+                Principal.context.SaveChanges ();
 
                 listBox1.DataSource = null;
-                listBox1.DataSource = objetoSeleccionado.GetIngredientes();
+                listBox1.DataSource = objetoSeleccionado.GetIngredientes ();
 
             }
 

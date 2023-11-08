@@ -14,42 +14,42 @@ namespace Front
 {
     public partial class MenuCompras : Form
     {
-        public MenuCompras()
+        public MenuCompras ( )
         {
-            InitializeComponent();
+            InitializeComponent ();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click ( object sender, EventArgs e )
         {
-            Inicio inicio = new Inicio();
-            inicio.Show();
-            this.Hide();
+            Inicio inicio = new Inicio ();
+            inicio.Show ();
+            this.Hide ();
         }
 
-        private void MenuCompras_Load(object sender, EventArgs e)
+        private void MenuCompras_Load ( object sender, EventArgs e )
         {
-            Principal.context.opciones.Load();
+            Principal.context.opciones.Load ();
             comboBox1.DataSource = null;
-            comboBox1.DataSource = Principal.context.opciones.Where(o => o.Tipo == "Comidas").ToList();
+            comboBox1.DataSource = Principal.context.opciones.Where (o => o.Tipo == "Comidas").ToList ();
 
             comboBox2.DataSource = null;
-            comboBox2.DataSource = Principal.context.opciones.Where(o => o.Tipo == "Bebidas").ToList();
+            comboBox2.DataSource = Principal.context.opciones.Where (o => o.Tipo == "Bebidas").ToList ();
 
             comboBox3.DataSource = null;
-            comboBox3.DataSource = Principal.context.opciones.Where(o => o.Tipo == "Postres").ToList();
+            comboBox3.DataSource = Principal.context.opciones.Where (o => o.Tipo == "Postres").ToList ();
 
 
         }
 
-        private void btnagregar_Click(object sender, EventArgs e)
+        private void btnagregar_Click ( object sender, EventArgs e )
         {
-            listBox1.Items.Add(comboBox1.SelectedItem);
+            listBox1.Items.Add (comboBox1.SelectedItem);
 
-            listBox1.Items.Add(comboBox2.SelectedItem);
+            listBox1.Items.Add (comboBox2.SelectedItem);
 
-            listBox1.Items.Add(comboBox3.SelectedItem);
+            listBox1.Items.Add (comboBox3.SelectedItem);
 
-            listBox1.Items.Add(dtp.Value.ToString());
+            listBox1.Items.Add (dtp.Value.ToString ());
         }
     }
 }

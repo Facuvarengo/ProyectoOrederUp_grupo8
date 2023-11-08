@@ -12,30 +12,30 @@ namespace Front
 {
     public partial class InicioAdm : Form
     {
-        public InicioAdm()
+        public InicioAdm ( )
         {
-            InitializeComponent();
+            InitializeComponent ();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click ( object sender, EventArgs e )
         {
-            AgregarProducto inicio = new AgregarProducto();
-            inicio.Show();
-            this.Hide();
+            AgregarProducto inicio = new AgregarProducto ();
+            inicio.Show ();
+            this.Hide ();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click ( object sender, EventArgs e )
         {
-            Reportes inicio = new Reportes();
-            inicio.Show();
-            this.Hide();
+            Reportes inicio = new Reportes ();
+            inicio.Show ();
+            this.Hide ();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click ( object sender, EventArgs e )
         {
-            Inicio inicio = new Inicio();
-            inicio.Show();
-            this.Hide();
+            Inicio inicio = new Inicio ();
+            inicio.Show ();
+            this.Hide ();
         }
     }
 }

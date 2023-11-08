@@ -13,25 +13,25 @@ namespace Front
 {
     public partial class Registrarse : Form
     {
-        Principal principal = new Principal();
+        Principal principal = new Principal ();
 
-        public Registrarse()
+        public Registrarse ( )
         {
-            InitializeComponent();
+            InitializeComponent ();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click ( object sender, EventArgs e )
         {
 
-            Principal.AgregarUsuario(txtUsuario.Text, txtContra.Text);
-            MessageBox.Show("Usuario creado pa", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Principal.AgregarUsuario (txtUsuario.Text, txtContra.Text);
+            MessageBox.Show ("Usuario creado pa", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click ( object sender, EventArgs e )
         {
-            Inicio inicio = new Inicio();
-            inicio.Show();
-            this.Hide();
+            Inicio inicio = new Inicio ();
+            inicio.Show ();
+            this.Hide ();
         }
     }
 }

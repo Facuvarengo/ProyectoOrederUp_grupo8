@@ -26,3 +26,17 @@ C:\Users\herna\OneDrive\Documentos\GitHub\ProyectoOrederUp_grupo8\Proyectopracti
 C:\Users\herna\OneDrive\Documentos\GitHub\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\Back.pdb
 C:\Users\herna\OneDrive\Documentos\GitHub\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\Back.genruntimeconfig.cache
 C:\Users\herna\OneDrive\Documentos\GitHub\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\ref\Back.dll
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\bin\Debug\net7.0\Back.deps.json
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\bin\Debug\net7.0\Back.runtimeconfig.json
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\bin\Debug\net7.0\Back.dll
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\bin\Debug\net7.0\Back.pdb
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\Back.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\Back.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\Back.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\Back.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\Back.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\Back.dll
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\refint\Back.dll
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\Back.pdb
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\Back.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\github proyecto\Proyecto-Order-Up\ProyectoOrederUp_grupo8\Proyectopractica\Back\obj\Debug\net7.0\ref\Back.dll

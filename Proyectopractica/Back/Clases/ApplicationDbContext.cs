@@ -22,7 +22,7 @@ namespace Back.Clases
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-4U7JAH5\\SQLEXPRESS;database=ProyectoPractica;trusted_connection=true;Encrypt=False");
+            optionsBuilder.UseSqlServer("server=DESKTOP-BAI14A1;database=orderup;trusted_connection=true;Encrypt=False");
         }
 
        

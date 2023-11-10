@@ -42,7 +42,7 @@ namespace Back.Migrations
 
                     b.HasIndex("IdOpcion");
 
-                    b.ToTable("ingredientesOpciones");
+                    b.ToTable("IngredientesOpciones");
                 });
 
             modelBuilder.Entity("Back.Clases.Ingredientes", b =>
@@ -66,7 +66,7 @@ namespace Back.Migrations
 
                     b.HasKey("IdIngredientes");
 
-                    b.ToTable("ingredientes");
+                    b.ToTable("Ingredientes");
                 });
 
             modelBuilder.Entity("Back.Clases.Opcion", b =>
@@ -97,7 +97,30 @@ namespace Back.Migrations
 
                     b.HasKey("IdOpcion");
 
-                    b.ToTable("opciones");
+                    b.ToTable("Opciones");
+                });
+
+            modelBuilder.Entity("Back.Clases.OpcionPedido", b =>
+                {
+                    b.Property<int>("IdOpcionPedido")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdOpcionPedido"));
+
+                    b.Property<int>("IdOpcion")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdPedido")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdOpcionPedido");
+
+                    b.HasIndex("IdOpcion");
+
+                    b.HasIndex("IdPedido");
+
+                    b.ToTable("OpcionPedido");
                 });
 
             modelBuilder.Entity("Back.Clases.Pedido", b =>
@@ -119,7 +142,7 @@ namespace Back.Migrations
 
                     b.HasKey("IdPedido");
 
-                    b.ToTable("pedidos");
+                    b.ToTable("Pedidos");
                 });
 
             modelBuilder.Entity("Back.Clases.Usuario", b =>
@@ -140,7 +163,7 @@ namespace Back.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("usuarios");
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("Back.Clases.IngredienteOpcion", b =>
@@ -162,6 +185,25 @@ namespace Back.Migrations
                     b.Navigation("Opcion");
                 });
 
+            modelBuilder.Entity("Back.Clases.OpcionPedido", b =>
+                {
+                    b.HasOne("Back.Clases.Opcion", "Opcion")
+                        .WithMany("Pedidos")
+                        .HasForeignKey("IdOpcion")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Back.Clases.Pedido", "Pedidos")
+                        .WithMany("Opciones")
+                        .HasForeignKey("IdPedido")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Opcion");
+
+                    b.Navigation("Pedidos");
+                });
+
             modelBuilder.Entity("Back.Clases.Ingredientes", b =>
                 {
                     b.Navigation("opciones");
@@ -169,7 +211,14 @@ namespace Back.Migrations
 
             modelBuilder.Entity("Back.Clases.Opcion", b =>
                 {
+                    b.Navigation("Pedidos");
+
                     b.Navigation("ingredientes");
+                });
+
+            modelBuilder.Entity("Back.Clases.Pedido", b =>
+                {
+                    b.Navigation("Opciones");
                 });
 #pragma warning restore 612, 618
         }

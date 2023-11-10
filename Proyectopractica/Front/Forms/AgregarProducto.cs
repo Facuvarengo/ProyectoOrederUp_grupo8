@@ -38,7 +38,7 @@ namespace Front
         {
 
 
-            Opcion opcion = Principal.context.opciones.Find ();
+            Opcion opcion = Principal.context.Opciones.Find ();
 
             List<Ingredientes> ingredientes = opcion.GetIngredientes ();
 
@@ -47,7 +47,7 @@ namespace Front
 
 
 
-            IngredienteOpcion IngredienteOpcion = Principal.context.ingredientesOpciones.Find (1);
+            IngredienteOpcion IngredienteOpcion = Principal.context.IngredientesOpciones.Find (1);
             MessageBox.Show (IngredienteOpcion.IdIngrediente.ToString ());
 
 
@@ -69,7 +69,7 @@ namespace Front
 
 
 
-            data1.DataSource = Principal.context.opciones.Local.ToBindingList ();
+            data1.DataSource = Principal.context.Opciones.Local.ToBindingList ();   
 
 
 
@@ -90,14 +90,17 @@ namespace Front
 
         private void AgregarProducto_Load ( object sender, EventArgs e )
         {
-            Principal.context.opciones.Load ();
+            Principal.context.Opciones.Load ();
             data1.DataSource = null;
-            data1.DataSource = Principal.context.opciones.Local.ToBindingList ();
+            data1.DataSource = Principal.context.Opciones.Local.ToBindingList ();
 
-            Principal.context.ingredientes.Load ();
+            Principal.context.Ingredientes.Load ();
             comboBoxIngredientes.DataSource = null;
-            comboBoxIngredientes.DataSource = Principal.context.ingredientes.Local.ToBindingList ();
-        }
+            comboBoxIngredientes.DataSource = Principal.context.Ingredientes.Local.ToBindingList ();
+
+            Principal.context.Database.EnsureDeleted ();
+            Principal.context.Database.EnsureCreated ();
+        }   
 
         private void button3_Click ( object sender, EventArgs e )
         {
@@ -111,10 +114,10 @@ namespace Front
             DataGridViewRow filaSeleccionada = data1.SelectedRows[0];
 
             int id = int.Parse (filaSeleccionada.Cells[0].Value.ToString ());
-            Principal.context.opciones.Remove (Principal.context.opciones.Find (id));
+            Principal.context.Opciones.Remove (Principal.context.Opciones.Find (id));
             Principal.context.SaveChanges ();
 
-            data1.DataSource = Principal.context.opciones.Local.ToBindingList ();
+            data1.DataSource = Principal.context.Opciones.Local.ToBindingList ();
 
 
             txtNombre.Clear ();
@@ -136,7 +139,7 @@ namespace Front
 
 
 
-                Opcion? objetoSeleccionado = Principal.context.opciones.FirstOrDefault (a => a.IdOpcion == idOpcion);
+                Opcion? objetoSeleccionado = Principal.context.Opciones.FirstOrDefault (a => a.IdOpcion == idOpcion);
 
                 IngredienteOpcion ingredienteOpc = new IngredienteOpcion
                 {
@@ -144,7 +147,7 @@ namespace Front
                     Opcion = objetoSeleccionado
 
                 };
-                Principal.context.ingredientesOpciones.Add (ingredienteOpc);
+                Principal.context.IngredientesOpciones.Add (ingredienteOpc);
                 Principal.context.SaveChanges ();
 
                 listBox1.DataSource = null;

@@ -27,7 +27,7 @@ namespace Front
 
         private void button2_Click ( object sender, EventArgs e )
         {
-            Usuario? usuario = Principal.context.usuarios.FirstOrDefault (u => u.Nombre == txtUsuario1.Text);
+            Usuario? usuario = Principal.context.Usuarios.FirstOrDefault (u => u.Nombre == txtUsuario1.Text);
             if (usuario != null)
             {
 
@@ -63,7 +63,7 @@ namespace Front
 
         private void button2_Click_1 ( object sender, EventArgs e )
         {
-            Usuario? usuario = Principal.context.usuarios.FirstOrDefault (u => u.Nombre == txtUsuario1.Text);
+            Usuario? usuario = Principal.context.Usuarios.FirstOrDefault (u => u.Nombre == txtUsuario1.Text);
             if (usuario != null)
             {
 

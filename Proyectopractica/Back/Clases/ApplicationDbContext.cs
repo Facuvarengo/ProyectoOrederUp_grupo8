@@ -9,20 +9,21 @@ namespace Back.Clases
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<Ingredientes> ingredientes { get; set; }
-        public DbSet<Opcion> opciones { get; set; }    
-        public DbSet<Pedido> pedidos { get; set; }
+        public DbSet<Ingredientes> Ingredientes { get; set; }
+        public DbSet<Opcion> Opciones { get; set; }    
+        public DbSet<Pedido> Pedidos { get; set; }
 
-        public DbSet<Usuario> usuarios { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
-        public DbSet<IngredienteOpcion> ingredientesOpciones { get; set; }  
+        public DbSet<IngredienteOpcion> IngredientesOpciones { get; set; }  
+        public DbSet<OpcionPedido> OpcionPedido { get; set; }        
 
 
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-BAI14A1;database=orderup;trusted_connection=true;Encrypt=False");
+            optionsBuilder.UseSqlServer("server=DESKTOP-4U7JAH5\\SQLEXPRESS;database=ProyectoPractica;trusted_connection=true;Encrypt=False");
         }
 
        

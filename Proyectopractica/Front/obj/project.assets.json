@@ -79,7 +79,7 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "Microsoft.Data.SqlClient/5.0.2": {
+      "Microsoft.Data.SqlClient/5.0.1": {
         "type": "package",
         "dependencies": {
           "Azure.Identity": "1.6.0",
@@ -1287,10 +1287,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.Data.SqlClient/5.0.2": {
-      "sha512": "mxcYU9I5TLzUegLVXiTtOE89RXN3GafL1Y+ExIbXvivvQtxplI4wxOgsiZGO4TZC18OJqui7mLVmiYpdFFImRQ==",
+    "Microsoft.Data.SqlClient/5.0.1": {
+      "sha512": "uu8dfrsx081cSbEevWuZAvqdmANDGJkbLBL2G3j0LAZxX1Oy8RCVAaC4Lcuak6jNicWP6CWvHqBTIEmQNSxQlw==",
       "type": "package",
-      "path": "microsoft.data.sqlclient/5.0.2",
+      "path": "microsoft.data.sqlclient/5.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1317,7 +1317,7 @@
         "lib/netstandard2.1/Microsoft.Data.SqlClient.dll",
         "lib/netstandard2.1/Microsoft.Data.SqlClient.pdb",
         "lib/netstandard2.1/Microsoft.Data.SqlClient.xml",
-        "microsoft.data.sqlclient.5.0.2.nupkg.sha512",
+        "microsoft.data.sqlclient.5.0.1.nupkg.sha512",
         "microsoft.data.sqlclient.nuspec",
         "ref/net462/Microsoft.Data.SqlClient.dll",
         "ref/net462/Microsoft.Data.SqlClient.pdb",
@@ -3445,19 +3445,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\herna\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\github proyecto\\Proyecto-Order-Up\\ProyectoOrederUp_grupo8\\Proyectopractica\\Front\\Front.csproj",
+      "projectUniqueName": "C:\\Users\\herna\\OneDrive\\Documentos\\GitHub\\ProyectoOrederUp_grupo8\\Proyectopractica\\Front\\Front.csproj",
       "projectName": "Front",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\github proyecto\\Proyecto-Order-Up\\ProyectoOrederUp_grupo8\\Proyectopractica\\Front\\Front.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\github proyecto\\Proyecto-Order-Up\\ProyectoOrederUp_grupo8\\Proyectopractica\\Front\\obj\\",
+      "projectPath": "C:\\Users\\herna\\OneDrive\\Documentos\\GitHub\\ProyectoOrederUp_grupo8\\Proyectopractica\\Front\\Front.csproj",
+      "packagesPath": "C:\\Users\\herna\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\herna\\OneDrive\\Documentos\\GitHub\\ProyectoOrederUp_grupo8\\Proyectopractica\\Front\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\herna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3465,15 +3470,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://packagesource": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\Usuario\\Desktop\\github proyecto\\Proyecto-Order-Up\\ProyectoOrederUp_grupo8\\Proyectopractica\\Back\\Back.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\Desktop\\github proyecto\\Proyecto-Order-Up\\ProyectoOrederUp_grupo8\\Proyectopractica\\Back\\Back.csproj"
+            "C:\\Users\\herna\\OneDrive\\Documentos\\GitHub\\ProyectoOrederUp_grupo8\\Proyectopractica\\Back\\Back.csproj": {
+              "projectPath": "C:\\Users\\herna\\OneDrive\\Documentos\\GitHub\\ProyectoOrederUp_grupo8\\Proyectopractica\\Back\\Back.csproj"
             }
           }
         }
@@ -3522,20 +3527,8 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Microsoft.EntityFrameworkCore.SqlServer 7.0.0 depende de Microsoft.Data.SqlClient (>= 5.0.1), pero no se encontró Microsoft.Data.SqlClient 5.0.1. Se resolvió una mejor coincidencia aproximada de Microsoft.Data.SqlClient 5.0.2.",
-      "libraryId": "Microsoft.Data.SqlClient",
-      "targetGraphs": [
-        "net7.0-windows7.0"
-      ]
-    }
-  ]
+  }
 }

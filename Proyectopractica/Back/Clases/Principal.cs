@@ -13,24 +13,24 @@ namespace Back.Clases
 
         public static void AgregarUsuario ( string nombre, string contraseña )
         {
-            Usuario usuarios = new Usuario ()
+            Usuario Usuarios = new Usuario ()
             {
                 Nombre = nombre,
                 Contraseña = contraseña,
 
             };
 
-            context.usuarios.Add (usuarios);
+            context.Usuarios.Add (Usuarios);
             context.SaveChanges ();
 
         }
 
         public static void EliminarUsuario ( int id )
         {
-            Usuario usuario = context.usuarios.Find (id);
+            Usuario usuario = context.Usuarios.Find (id);
             if (usuario != null)
             {
-                context.usuarios.Remove (usuario);
+                context.Usuarios.Remove (usuario);
                 context.SaveChanges ();
             }
         }
@@ -38,7 +38,7 @@ namespace Back.Clases
 
         public static void ModificarUsuario ( int id, string nuevoNombre, string nuevaContraseña )
         {
-            Usuario usuario = context.usuarios.Find (id);
+            Usuario usuario = context.Usuarios.Find (id);
             if (usuario != null)
             {
                 usuario.Nombre = nuevoNombre;
@@ -50,7 +50,7 @@ namespace Back.Clases
 
         public static Opcion AgregarOpcion ( string nombre, string tipo, string descripcion, decimal precio, int cantidad )
         {
-            Opcion opciones = new Opcion ()
+            Opcion Opciones = new Opcion ()
             {
                 Nombre = nombre,
                 Tipo = tipo,
@@ -60,14 +60,14 @@ namespace Back.Clases
 
             };
 
-            context.opciones.Add (opciones);
+            context.Opciones.Add (Opciones);
             context.SaveChanges ();
-            return opciones;
+            return Opciones;
 
         }
         public static void ModificarOpcion ( int id, string nombre, string tipo, string descripcion, decimal precio, int cantidad )
         {
-            Opcion opcion = context.opciones.Find (id);
+            Opcion opcion = context.Opciones.Find (id);
             if (opcion != null)
             {
                 opcion.Nombre = nombre;
@@ -80,8 +80,8 @@ namespace Back.Clases
         }
         public static void EliminarOpcion ( int id )
         {
-            Opcion opcion = context.opciones.Find (id);
-            context.opciones.Remove (opcion);
+            Opcion opcion = context.Opciones.Find (id);
+            context.Opciones.Remove (opcion);
             context.SaveChanges ();
         }
 
@@ -95,7 +95,7 @@ namespace Back.Clases
                 Precio = precio,
             };
 
-            context.ingredientes.Add (ingrediente);
+            context.Ingredientes.Add (ingrediente);
             context.SaveChanges ();
             return ingrediente;
         }
@@ -103,17 +103,17 @@ namespace Back.Clases
 
         public static void EliminarIngredientes ( int id )
         {
-            Ingredientes ingrediente = context.ingredientes.Find (id);
+            Ingredientes ingrediente = context.Ingredientes.Find (id);
             if (ingrediente != null)
             {
-                context.ingredientes.Remove (ingrediente);
+                context.Ingredientes.Remove (ingrediente);
                 context.SaveChanges ();
             }
         }
 
         public static void ModificarIngredientes ( int id, string nombre, string descripcion, decimal precio )
         {
-            Ingredientes ingrediente = context.ingredientes.Find (id);
+            Ingredientes ingrediente = context.Ingredientes.Find (id);
             if (ingrediente != null)
             {
                 ingrediente.Nombre = nombre;
@@ -125,7 +125,7 @@ namespace Back.Clases
 
         }
 
-        //                                     metodos de pedidos
+        //                                     metodos de Pedidos
         public static Pedido AgregarPedido ( DateTime fecha, bool cargado, int cantidad )
         {
             Pedido pedido = new Pedido ()
@@ -135,7 +135,7 @@ namespace Back.Clases
                 cantidad = cantidad,
             };
 
-            context.pedidos.Add (pedido);
+            context.Pedidos.Add (pedido);
             context.SaveChanges ();
             return pedido;
         }
@@ -143,10 +143,10 @@ namespace Back.Clases
 
         public static void EliminarPedido ( int id )
         {
-            Pedido pedido = context.pedidos.Find (id);
+            Pedido pedido = context.Pedidos.Find (id);
             if (pedido != null)
             {
-                context.pedidos.Remove (pedido);
+                context.Pedidos.Remove (pedido);
                 context.SaveChanges ();
             }
         }
@@ -154,7 +154,7 @@ namespace Back.Clases
 
         public static void ModificarPedido ( int id, DateTime fecha, bool cargado, int cantidad )
         {
-            Pedido pedido = context.pedidos.Find (id);
+            Pedido pedido = context.Pedidos.Find (id);
             if (pedido != null)
             {
                 pedido.Fecha = fecha;

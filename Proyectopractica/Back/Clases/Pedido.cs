@@ -15,6 +15,7 @@ namespace Back.Clases
         public bool Cargado { get; set; }
         public int cantidad { get; set; }
 
+        public List<OpcionPedido> Opciones { get; set; } = null!; 
 
         
     }

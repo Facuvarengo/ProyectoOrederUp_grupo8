@@ -28,15 +28,15 @@ namespace Front
 
         private void MenuCompras_Load ( object sender, EventArgs e )
         {
-            Principal.context.opciones.Load ();
+            Principal.context.Opciones.Load ();
             comboBox1.DataSource = null;
-            comboBox1.DataSource = Principal.context.opciones.Where (o => o.Tipo == "Comidas").ToList ();
+            comboBox1.DataSource = Principal.context.Opciones.Where (o => o.Tipo == "Comidas").ToList ();
 
             comboBox2.DataSource = null;
-            comboBox2.DataSource = Principal.context.opciones.Where (o => o.Tipo == "Bebidas").ToList ();
+            comboBox2.DataSource = Principal.context.Opciones.Where (o => o.Tipo == "Bebidas").ToList ();
 
             comboBox3.DataSource = null;
-            comboBox3.DataSource = Principal.context.opciones.Where (o => o.Tipo == "Postres").ToList ();
+            comboBox3.DataSource = Principal.context.Opciones.Where (o => o.Tipo == "Postres").ToList ();
 
 
         }
@@ -50,6 +50,8 @@ namespace Front
             listBox1.Items.Add (comboBox3.SelectedItem);
 
             listBox1.Items.Add (dtp.Value.ToString ());
+
+
         }
     }
 }

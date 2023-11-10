@@ -19,6 +19,8 @@ namespace Back.Clases
 
         public List<IngredienteOpcion> ingredientes { get; set; }   = new List<IngredienteOpcion>();
 
+        public List<OpcionPedido> Pedidos { get; set; } = new List<OpcionPedido>();
+
 
         public override string ToString()
         {
@@ -29,11 +31,11 @@ namespace Back.Clases
         {
             List<Ingredientes> ingredientes = new List<Ingredientes>();
            
-            foreach(IngredienteOpcion io in Principal.context.ingredientesOpciones.ToList())
+            foreach(IngredienteOpcion io in Principal.context.IngredientesOpciones.ToList())
             {
                if( io.IdOpcion == this.IdOpcion)
                 {
-                    ingredientes.Add(Principal.context.ingredientes.Find(io.IdIngrediente));
+                    ingredientes.Add(Principal.context.Ingredientes.Find(io.IdIngrediente));
                 }
             }
 
